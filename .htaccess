@@ -1,0 +1,8 @@
+# Redirect legacy .html to .php (preserve query strings)
+RewriteEngine On
+RewriteCond %{THE_REQUEST} \s/+(.*)\.html[\s?] [NC]
+RewriteRule ^ %1.php [R=301,NE,L]
+
+# If a .html file is requested directly, serve the .php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.+)\.html$ $1.php [L,QSA]
