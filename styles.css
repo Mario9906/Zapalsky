@@ -350,7 +350,7 @@ input:focus-visible,textarea:focus-visible{
   .grid--two{grid-template-columns:1.2fr .8fr}
 }
 
-@media (min-width:768px){
+@media (max-width:1023px){
   .hamburger{display:inline-grid}
   .nav{
     position:fixed;inset:60px 0 auto 0;padding:16px;background:rgba(17,24,38,0.98);
